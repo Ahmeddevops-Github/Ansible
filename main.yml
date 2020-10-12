@@ -13,7 +13,4 @@
 - name: Delete unused time servers
   lineinfile:
     path: /etc/ntp.conf
-    regexp: "^server [0,1,2,3].*iburst$"
-    state: absent
-    backup: yes
-  notify: Debian restart ntpd
+  
